@@ -1,8 +1,10 @@
-#_twitter.lite_#
+# _twitter.lite_ #
 ---
 ----
+
 ---
-#####_**disclaimer: this was built as a project for school. i am in no way associated with twitter heavy**_
+##### **_disclaimer: this was built as a project for school. i am in no way associated with twitter heavy_** #####
+
 ---
 
 ![login](readme_img/login.png)
