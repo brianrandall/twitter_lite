@@ -31,6 +31,11 @@ npm run start
 **_install sql_**
 
 - click [here](https://dev.mysql.com/downloads/mysql/)
+
+**_install sql workbench_**
+
+- [here](https://dev.mysql.com/downloads/workbench/)
+- connect to your local db instance
 - create a new schema called ```fake_twitter```
 
 **_backend is java spring boot / sql_**
