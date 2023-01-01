@@ -5,10 +5,10 @@
 #####**_disclaimer: this was built as a project for school. i am in no way associated with twitter heavy_**
 ---
 
-![login](login.png)
+![login](readme_img/login.png)
 ----
 ----
-![home](home.png)
+![home](readme_img/home.png)
 ----
 ----
 
