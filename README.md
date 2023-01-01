@@ -38,7 +38,11 @@ npm run start
 - connect to your local db instance
 - create a new schema called ```fake_twitter```
 
-**_backend is java spring boot / sql_**
+**_install java se jdk_**
+
+- [here](https://www.oracle.com/java/technologies/downloads/)
+
+**_install / run java spring boot middleware_**
 
 - install maven
 
