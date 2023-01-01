@@ -16,6 +16,10 @@
 
 **_front end created with create-react-app_**
 
+
+- install [node](https://nodejs.org/en/download/)
+- navigate to ```/client```
+
 ```
 npm i
 ```
@@ -24,6 +28,11 @@ npm i
 npm run start
 ```
 
+**_install sql_**
+
+- click [here](https://dev.mysql.com/downloads/mysql/)
+- create a new schema called ```fake_twitter```
+
 **_backend is java spring boot / sql_**
 
 - install maven
@@ -31,11 +40,19 @@ npm run start
 ```
 brew install maven
 ```
+
+- navigate to ```/server/twitter-lite```
+
 ```
 mvn spring-boot:run
 ```
-**_you'll probably want to have sql running on your machine too_**
+ 
+***
 
-- click [here](https://dev.mysql.com/downloads/mysql/) 
+do things in this order. sql has to be up and running before you boot spring in order for db tables to be created properly
+
+***
 
 you may or may not have to go in and change the url(s) of the axios call(s) in order to get everything to talk to each other right. good luck!!!!!!!!!
+
+***
