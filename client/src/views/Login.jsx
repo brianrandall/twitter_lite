@@ -53,7 +53,7 @@ const Login = () => {
         
 
         <div>
-            <code>new user?? <a href="/register" style={{fontStyle: 'oblique'}}>Sign up</a></code>
+            <code>new user? <a href="/register" style={{fontStyle: 'oblique'}}>Sign up</a></code>
         </div>
         
     </div>
