@@ -15,7 +15,7 @@ const Feed = (props) => {
   
   useEffect(() => {
     console.log(sessionStorage.getItem('id'))
-  axios.get(`http://localhost:8080/api/posts/all/${id}/following`)
+  axios.get(`http://54.67.59.70/api/posts/all/${id}/following`)
   .then((res) => {
       setPost(res.data)
       console.log(post)
@@ -34,7 +34,7 @@ const Feed = (props) => {
   })
 
   const likePost = (id) => {
-    axios.post(`http://localhost:8080/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
+    axios.post(`http://54.67.59.70/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
     .then((res) => {
         console.log(res.data)
         setAction(!action)
@@ -43,7 +43,7 @@ const Feed = (props) => {
     }
 
     const unlikePost = (id) => {
-        axios.delete(`http://localhost:8080/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
+        axios.delete(`http://54.67.59.70/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
         .then((res) => {
             console.log(res.data)
             setAction(!action)

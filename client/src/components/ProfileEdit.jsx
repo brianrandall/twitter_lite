@@ -134,7 +134,7 @@ const ProfileEdit = () => {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/users/${id}`)
+        axios.get(`http://54.67.59.70/api/users/${id}`)
         .then((res) => {
             console.log(res.data)
             
@@ -155,7 +155,7 @@ const ProfileEdit = () => {
         e.preventDefault()
 
 
-        axios.put(`http://localhost:8080/api/users/edit/${id}`,
+        axios.put(`http://54.67.59.70/api/users/edit/${id}`,
             {firstName,
             lastName,
             email,

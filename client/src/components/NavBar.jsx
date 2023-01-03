@@ -18,7 +18,7 @@ const logout = () => {
 
 
 useEffect(() => {
-axios.get(`http://localhost:8080/api/users/email/${sessionStorage.getItem('loggedIn')}`)
+axios.get(`http://54.67.59.70/api/users/email/${sessionStorage.getItem('loggedIn')}`)
     .then((res) => {
         console.log(res.data)
         setUsername(res.data.username)

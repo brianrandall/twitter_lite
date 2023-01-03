@@ -5,14 +5,13 @@ const Search = () => {
 
     const [searchFor, setSearchFor]= useState('')
     const [searchResults, setSearchResults] = useState([])
-    const [noResults, setNoResults] = useState('')
     
     const search = (e) => {
         setSearchFor(e.target.value)
     }
 
     useEffect(() => {
-      axios.get(`http://localhost:8080/api/users/search/${searchFor}`)
+      axios.get(`http://54.67.59.70/api/users/search/${searchFor}`)
       .then((res) => {
         console.log(res.data)
         setSearchResults(res.data)

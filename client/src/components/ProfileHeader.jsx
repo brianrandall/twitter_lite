@@ -12,7 +12,7 @@ const ProfileHeader = () => {
     const [action, setAction] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/users/username/${username}`)
+        axios.get(`http://54.67.59.70/api/users/username/${username}`)
         
         .then((res) => {
             console.log(res.data)
@@ -21,7 +21,7 @@ const ProfileHeader = () => {
         })
         .catch((err) => console.log(err))
 
-        axios.get(`http://localhost:8080/api/users/${sessionStorage.getItem('id')}`)
+        axios.get(`http://54.67.59.70/api/users/${sessionStorage.getItem('id')}`)
         .then((res) => {
             console.log(res.data)
             setLoggedInUserFollowing(JSON.stringify(res.data.followings))
@@ -32,7 +32,7 @@ const ProfileHeader = () => {
 
     const follow = () => {
         console.log(user.id)
-        axios.post(`http://localhost:8080/api/users/${sessionStorage.getItem('id')}/follows/new-follow`, {
+        axios.post(`http://54.67.59.70/api/users/${sessionStorage.getItem('id')}/follows/new-follow`, {
             followingId: user.id
         })
         .then((res) => {
@@ -43,7 +43,7 @@ const ProfileHeader = () => {
     }
 
     const unfollow = () => {
-        axios.delete(`http://localhost:8080/api/users/${sessionStorage.getItem('id')}/follows/delete/${user.id}`)
+        axios.delete(`http://54.67.59.70/api/users/${sessionStorage.getItem('id')}/follows/delete/${user.id}`)
         .then((res) => {
             console.log(res.data)
             setAction(!action)

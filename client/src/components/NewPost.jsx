@@ -15,7 +15,7 @@ const charCount = (e) => {
 
 const handlePost = (e) => {
     e.preventDefault()
-    axios.post(`http://localhost:8080/api/posts/${username}`, {content})
+    axios.post(`http://54.67.59.70/api/posts/${username}`, {content})
     .then((response) => {
         console.log(response)
         console.log("new post been posted")
@@ -26,7 +26,7 @@ const handlePost = (e) => {
 }
 
 
-axios.get(`http://localhost:8080/api/users/email/${sessionStorage.getItem('loggedIn')}`)
+axios.get(`http://54.67.59.70/api/users/email/${sessionStorage.getItem('loggedIn')}`)
 .then((res) => {
     setUsername(res.data.username)
 })

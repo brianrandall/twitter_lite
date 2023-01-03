@@ -18,7 +18,7 @@ export const Post = () => {
 
     
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/posts/one/${id}`)
+        axios.get(`http://54.67.59.70/api/posts/one/${id}`)
         .then((res) => {
             setPost(res.data)
             setComments(res.data.comments)
@@ -30,7 +30,7 @@ export const Post = () => {
     const addComment = (e) => {
         e.preventDefault()
     
-        axios.post(`http://localhost:8080/api/posts/${id}/comment/`, {
+        axios.post(`http://54.67.59.70/api/posts/${id}/comment/`, {
         content, 
         post_id: id,
         username: sessionStorage.getItem('loggedInUsername')
@@ -49,7 +49,7 @@ export const Post = () => {
     }
 
     const likePost = (id) => {
-        axios.post(`http://localhost:8080/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
+        axios.post(`http://54.67.59.70/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
         .then((res) => {
             console.log(res.data)
             setAction(!action)
@@ -58,7 +58,7 @@ export const Post = () => {
         }
     
         const unlikePost = (id) => {
-            axios.delete(`http://localhost:8080/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
+            axios.delete(`http://54.67.59.70/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
             .then((res) => {
                 console.log(res.data)
                 setAction(!action)

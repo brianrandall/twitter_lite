@@ -14,7 +14,7 @@ const Profile = () => {
     const id = parseInt(sessionStorage.getItem('id'))
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/posts/${username}`)
+        axios.get(`http://54.67.59.70/api/posts/${username}`)
         .then((res) => {
             console.log(res.data)
             setPost(res.data)
@@ -33,7 +33,7 @@ const Profile = () => {
     }
 
     const likePost = (id) => {
-        axios.post(`http://localhost:8080/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
+        axios.post(`http://54.67.59.70/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
         .then((res) => {
             console.log(res.data)
             setAction(!action)
@@ -42,7 +42,7 @@ const Profile = () => {
         }
     
         const unlikePost = (id) => {
-            axios.delete(`http://localhost:8080/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
+            axios.delete(`http://54.67.59.70/api/posts/${id}/favorite/${sessionStorage.getItem('id')}`)
             .then((res) => {
                 console.log(res.data)
                 setAction(!action)
