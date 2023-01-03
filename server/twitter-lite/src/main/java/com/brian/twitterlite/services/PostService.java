@@ -69,8 +69,6 @@ public class PostService {
         }
     }
 
-
-
     //get one post
     public Post getOnePost(Long id) {
         Optional<Post> optionalPost = postRepository.findById(id);

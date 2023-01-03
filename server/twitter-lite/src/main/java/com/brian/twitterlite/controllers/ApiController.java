@@ -60,6 +60,11 @@ public class ApiController {
     
     }
 
+    @GetMapping("/hello")
+    public String helloWorld() {
+        return "hell0 w0rld";
+    }
+
     @GetMapping("/users/email/{email}")
     public User searchForEmail(
         @PathVariable("email") String email
