@@ -17,7 +17,7 @@ const Login = () => {
     const loginUser = (e) => {
         e.preventDefault()
         console.log(userLogin)
-        fetch('http://54.67.59.70/api/users/login', {
+        fetch('https://54.67.59.70/api/users/login', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(userLogin),
