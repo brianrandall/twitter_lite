@@ -110,13 +110,13 @@ const Register = () => {
             passwordConfirmation
         }
 
-        axios.get(`https://54.67.59.70/api/users/username/${username}`)
+        axios.get(`http://54.67.59.70/api/users/username/${username}`)
             .then((res) => {
                 if (res.data.username === username) {
                     setUserNameExists('username already exists')
                 } else {
                     setUserNameExists('')
-                    fetch('https://54.67.59.70/api/users/register', {
+                    fetch('http://54.67.59.70/api/users/register', {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(newUser)
