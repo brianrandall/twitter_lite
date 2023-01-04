@@ -153,23 +153,30 @@ const ProfileEdit = () => {
 
     const updateUser = (e) => {
         e.preventDefault()
-
-
-        axios.put(`http://54.67.59.70/api/users/edit/${id}`,
-            {firstName,
-            lastName,
-            email,
-            username,
-            bio,
-            location,
-            password}
-        )
+        axios.get(`http://54.67.59.70/api/users/username/${username}`)
         .then((res) => {
-            console.log(res.data)
-            setSuccessmsg(res.data)
-        })
-        .catch((err) => console.log(err))
+            if ((res.data.username === username) && res.data.username !== user.username ) {
+                setUserNameExists('Username already exists')
+            } else {
+                setUserNameExists('')
+            axios.put(`http://54.67.59.70/api/users/edit/${id}`,
+                {firstName,
+                lastName,
+                email,
+                username,
+                bio,
+                location,
+                password}
+            )
+            .then((res) => {
+                console.log(res.data)
+                setSuccessmsg(res.data)
+            })
+            .catch((err) => console.log(err))
+        }
+    }) .catch((err) => console.log(err))
     }
+
 
     const checkIfLoggedIn = () => {
         if (sessionStorage.getItem('loggedIn') === user.email) {

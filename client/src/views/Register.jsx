@@ -162,8 +162,6 @@ const Register = () => {
         {passwordError ? <span className='error-text'>{'>>'}{passwordError}</span> : ''}
         {passwordConfirmationError ? <span className='error-text'>{'>>'}{passwordConfirmationError}</span> : ''}
         </div>
-        {password}<br/>
-        {passwordConfirmation}
     </div>
   )
 }
