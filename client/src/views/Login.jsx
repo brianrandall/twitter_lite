@@ -37,8 +37,6 @@ const Login = () => {
             }
         })
     }
-    //make the twitter bird fly around the page
-
 
   return (
     <div className='middleOfPage'>
