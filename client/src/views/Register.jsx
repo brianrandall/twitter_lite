@@ -138,7 +138,7 @@ const Register = () => {
     <div className='middleOfPage'>
         <img src={arrow} height='33'/> 
         <code>join us </code>
-        <form onSubmit={registerNewUser} class='centerForm'>
+        <form onSubmit={registerNewUser} style={{display: 'flex', flexDirection: 'column', gap: '1px', alignItems: 'center'}}>
             
             <input type="text" placeholder="first name" required={true} name='firstName' onChange={ firstNameValidations } /><br/>
             <input type="text" placeholder="last name" required={true} name='lastName' onChange={ lastNameValidations } /><br/>
@@ -148,10 +148,10 @@ const Register = () => {
             <input type="password" placeholder="confirm password" required={true} onChange={ passwordCompare }/><br/>
             {fnx === true && lnx === true && unx === true && emx === true && pwx === true && pcx === true
             ?
-            <button type="submit" style={{marginTop: '10px', marginLeft: '40px'}}>Register</button>
+            <button type="submit" style={{marginTop: '10px', width: '100px'}}>register</button>
             :
-            <button type="submit" style={{marginTop: '10px', marginLeft: '40px'}}
-             disabled>Register</button>}
+            <button type="submit" style={{marginTop: '10px', width: '100px'}}
+             disabled>register</button>}
         </form>
         <div style={{display: 'flex', flexDirection: 'column'}}>
         {firstNameError ? <span className='error-text'>{'>>'}{firstNameError}</span> : ''}
