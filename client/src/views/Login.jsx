@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import arrow from '../components/img/arrow100.png'
+import sitePreview from '../components/img/site.gif'
 
 const Login = () => {
 
@@ -40,7 +41,7 @@ const Login = () => {
 
   return (
     <div className='middleOfPage'>
-       <img src={arrow} height='33'/> 
+       <img src={arrow} height='33' alt='site-icon'/> 
         <code>welcome to twitter.lite</code>
         <form onSubmit={loginUser} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1px'}}>
             <input type="text" placeholder="email" onChange={(e) => setEmail(e.target.value)} /><br/>
@@ -53,7 +54,12 @@ const Login = () => {
         <div>
             <code>new user? <a href="/register" style={{fontStyle: 'oblique'}}>sign up</a></code>
         </div>
-        
+        <div style={{marginTop: '5%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <code style={{fontSize: 'smaller'}}>
+                take a look inside...
+            </code>
+            <img src={sitePreview} style={{width: '70%', height: 'auto'}} alt='sitePreview'/>
+            </div>
     </div>
   )
 }

@@ -136,7 +136,7 @@ const Register = () => {
 
   return (
     <div className='middleOfPage'>
-        <img src={arrow} height='33'/> 
+        <img src={arrow} height='33' alt='site-icon'/> 
         <code>join us </code>
         <form onSubmit={registerNewUser} style={{display: 'flex', flexDirection: 'column', gap: '1px', alignItems: 'center'}}>
             
