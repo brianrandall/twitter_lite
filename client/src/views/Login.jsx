@@ -42,16 +42,16 @@ const Login = () => {
     <div className='middleOfPage'>
        <img src={arrow} height='33'/> 
         <code>welcome to twitter.lite</code>
-        <form onSubmit={loginUser}>
+        <form onSubmit={loginUser} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1px'}}>
             <input type="text" placeholder="email" onChange={(e) => setEmail(e.target.value)} /><br/>
             <input type="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} /><br/>
             {tryagain ? <p style={{color: 'red'}}>{tryagain}</p> : ''}
-            <button type="submit" style={{marginTop: '10px', marginTop: '5px', marginLeft: '47px'}}>Login</button>
+            <button type="submit" style={{marginTop: '10px', marginTop: '5px', width: '100px'}}>Login</button>
         </form>
         
 
         <div>
-            <code>new user? <a href="/register" style={{fontStyle: 'oblique'}}>Sign up</a></code>
+            <code>new user? <a href="/register" style={{fontStyle: 'oblique'}}>sign up</a></code>
         </div>
         
     </div>
